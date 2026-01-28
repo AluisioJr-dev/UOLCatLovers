@@ -53,7 +53,7 @@ gcp_architecture/
 │   └── Mermaid JavaScript Lib
 │   └── Utilizado em diagrams.html
 │
-└── 🌐 diagrams.html
+└── 🌐 Diagrams
     └── Comparação visual por html
     └── Visualização dos diagramas das arquiteturas
     └── Recomendações a partir dos cenários
@@ -169,6 +169,9 @@ TOTAL:           ~$350-400
 ---
 
 ## 🔗 Links Importantes
+
+### Solução Arquitetura GCP
+- [Arquiteturas GCP — Diagrams (GitHub Pages)](https://aluisiojr-dev.github.io/UOLCatLovers/cat_facts_collector/gcp_architecture/diagrams.html)
 
 ### Documentação Oficial GCP
 - [Cloud Functions](https://cloud.google.com/functions/docs)
