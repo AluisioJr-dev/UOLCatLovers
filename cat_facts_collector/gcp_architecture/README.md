@@ -55,7 +55,7 @@ gcp_architecture/
 │
 └── 🌐 diagrams.html
     └── Comparação visual por html
-    └── Visualização dos diagramas das soluções em arquitetura 
+    └── Visualização dos diagramas das arquiteturas
     └── Recomendações a partir dos cenários
 ```
 
@@ -184,6 +184,6 @@ TOTAL:           ~$350-400
 
 ---
 
-**Data:** 27/01/2026  
+**Data:** 28/01/2026  
 **Autor:** GitHub Copilot  
 **Projeto:** UOLCatLovers - Questão 2
