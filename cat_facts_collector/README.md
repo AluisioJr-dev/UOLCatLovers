@@ -64,6 +64,7 @@ cat_facts_collector/
 
 ## 🔗 Links Úteis
 
+- [Arquitetura GCP](gcp_architecture/README.md)
 - [BigQuery Schema](bigquery_schema/README.md)
 - [Guia de Execução](GUIA_EXECUCAO.md)
 
