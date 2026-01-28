@@ -37,6 +37,7 @@ cat_facts_collector/
 ├── v1_cat_fact_official_2026_01/   # Pipeline v1 (Heroku/offline)
 ├── v2_catfact_ninja_2026_01/       # Pipeline v2 (catfact.ninja/online)
 ├── bigquery_schema/                # Modelos, queries e documentação do BigQuery
+└── gcp_architecture/               # Arquitetura GCP, comparações de esteiras, recomendações
 └── ...
 ```
 
