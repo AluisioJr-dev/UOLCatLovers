@@ -309,7 +309,7 @@ Custo por query mensal: ~$0.000025 (menos de 1 centavo!)
 
 ## 🛠️ Como Criar a Tabela no BigQuery?
 
-### Opção 1: Usando o Console Web
+### Usando o Console Web
 
 1. Acesse [BigQuery Console](https://console.cloud.google.com/bigquery)
 2. No seu projeto, crie um dataset: `cat_facts_dataset`
@@ -343,41 +343,12 @@ PARTITION BY ingestion_date
 CLUSTER BY source_api, is_duplicate, ingestion_date;
 ```
 
-### Opção 2: Usando Terraform
-
-O arquivo já está pronto em: `gcp_architecture/archive/scheduler_detailed/terraform/bigquery.tf`
-
-### Opção 3: Usando Python
-
-```python
-from google.cloud import bigquery
-
-client = bigquery.Client()
-schema_path = "cat_facts_schema.json"
-
-# Carrega o schema JSON
-with open(schema_path) as f:
-    schema_config = json.load(f)
-
-# Cria a tabela
-table = bigquery.Table(
-    "uol-cat-lovers.cat_facts_dataset.cat_facts",
-    schema=[bigquery.SchemaField(**field) for field in schema_config["schema"]["fields"]]
-)
-table.time_partitioning = bigquery.TimePartitioning(field="ingestion_date")
-table.clustering_fields = ["source_api", "is_duplicate", "ingestion_date"]
-
-table = client.create_table(table)
-print(f"Tabela criada: {table.table_id}")
-```
-
 ---
 
 ## 📚 Arquivos Relacionados
 
 | Arquivo | Descrição |
 |---------|-----------|
-| **cat_facts_schema.json** | Schema JSON completo (para programação) |
 | **SCHEMA_DOCUMENTATION.md** | Documentação técnica detalhada (para devs) |
 | **README.md** | Este arquivo (guia simples para todos) |
 
@@ -431,7 +402,6 @@ Use o campo `data_quality_score`:
 
 - Dúvidas técnicas: Consulte **SCHEMA_DOCUMENTATION.md**
 - Dúvidas sobre queries: Veja exemplos acima na seção "Consultas Úteis"
-- Schema JSON: Use **cat_facts_schema.json** para automação
 
 ---
 
